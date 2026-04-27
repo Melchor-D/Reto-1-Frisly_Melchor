@@ -1,19 +1,29 @@
-const entradaUsuario ={
-    nombre:"Frisly",
+const entradaUsuario = {
+    nombre: "Frisly",
     apellido: "Melchor",
     email: "Frislymelchord@gmail.com",
     telefono: "45852356",
     ciudad: "Guatemala",
-    Pais: "Guatemal",
-    Activo: true
+    Pais: "Guatemala", 
+    Activo: true       
 };
 
-console.log ("frislymelchord@gmial.com")
-console.log ("contacto")
+const { 
+    nombre, 
+    apellido, 
+    email: correo, 
+    telefono: contacto, 
+    ciudad, 
+    Pais, 
+    Activo 
+} = entradaUsuario;
 
 const usuarioFormateado = {
-    Identidad: {nombre, apellido},
-    contanto: {email, telefono},
-    ubicacion: {ciudad, pais},
-     ...{Activo}
+    identidad: { nombre, apellido },
+    contacto: { correo, contacto },
+    ubicacion: { ciudad, pais: Pais },
+    ...{ Activo }
 };
+
+console.log("--- OBJETO FINAL ---");
+console.log(usuarioFormateado);
